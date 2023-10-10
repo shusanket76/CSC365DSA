@@ -37,6 +37,8 @@ vaersVaxCOVIDID2022 =vaersIDHashmapCovid("../dataset/2022Vaers/2022VAERSVAX.csv"
 vaersVaxCOVIDID2023 =vaersIDHashmapCovid("../dataset/2023Vaers/2023VAERSVAX.csv")[0]
 vaersVaxNonDomestics =vaersIDHashmapCovid("../dataset/NonDomestics/NONDomesticVAERSVAX.csv")[0]
 print(len(vaersVaxCOVIDID2020)+len(vaersVaxCOVIDID2021)+len(vaersVaxCOVIDID2022)+len(vaersVaxCOVIDID2023)+len(vaersVaxNonDomestics))
+
+
 # ================================================================================================================================
 def vaersSymptomsHashmapCovid(hasmap, filepath):
     # creating a hasmap
@@ -66,6 +68,8 @@ vaersSymptomCovid2021 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2021,"../dataset
 vaersSymptomCovid2022 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2022,"../dataset/2022Vaers/2022VAERSSYMPTOMS.csv")[0]
 vaersSymptomCovid2023 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2023,"../dataset/2023Vaers/2023VAERSSYMPTOMS.csv")[0]
 vaersNonDomesticsSymptoms =vaersSymptomsHashmapCovid(vaersVaxNonDomestics,"../dataset/NonDomestics/NonDomesticVAERSSYMPTOMS.csv")[0]
+
+
 # # Assignment1/dataset/NonDomestics/NonDomesticVAERSSYMPTOMS.csv
 # print(len(vaersSymptomCovid2020)+len(vaersSymptomCovid2021)+len(vaersSymptomCovid2022)+len(vaersSymptomCovid2023)+len(vaersNonDomesticsSymptoms))
 # # # # ============================================================================================================================

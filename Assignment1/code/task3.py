@@ -7,7 +7,7 @@ def read_csv(filename):
     for x in reader:
         
         data.append(x)
-    print(len(data))
+  
             
     return data
 
@@ -15,6 +15,7 @@ a = read_csv("./SYMPTOMDATA.csv")
 # a = read_csv("./VAERS_COVID_DataAugust2023.csv")
 
 ageRset = {
+    "NO AGE":[-1,-1],
     "<1 year": [0, 1],
     "1-3 years": [1, 4],
     "4-11": [4, 12],
@@ -29,6 +30,7 @@ ageRset = {
 }
 
 ageGroups = {
+    "NO AGE":[],
     "<1 year": [],
     "1-3 years": [],
     "4-11": [],
@@ -46,23 +48,18 @@ blank=0
 for x in a:
     
     if x["AGE_YRS"]=="":
-        blank+=1
-        continue
-    age = float(x["AGE_YRS"])
-    for c,d in ageRset.items():
-        if d[0]<=age and d[1]>=age:
-            ageGroups[c].append(x)
+        ageGroups["NO AGE"].append(x)
 
-    
-print("BLANK================================="+str(blank))
-
+    else:
+        age = float(x["AGE_YRS"])
+        for c,d in ageRset.items():
+            if d[0]<=age and d[1]>=age:
+                ageGroups[c].append(x)
 
 # ========================================================================
 def insertion_sort(data, field):
     a=0
     for i in range(1, len(data)):
-        
-       
         pivot = float(data[i][field])
         j = i - 1
      
@@ -87,12 +84,17 @@ def insertion_sortWords(data, field):
         a+=1
  
 # for z in ageGroups:
+#     if z=="NO AGE":
+#         continue
 
 #     insertion_sort(ageGroups[z], "AGE_YRS")
+# print("DONEEEEEE")
 # for i in ageGroups:
 #     insertion_sortWords(ageGroups[i], "SEX")
 # for k in ageGroups:
 #     insertion_sortWords(ageGroups[k], "VAX_NAME")
+
+# ==========================================DEATHS COUNTS======================================================================================
 unique = set()
 a=0
 b=0
@@ -115,16 +117,17 @@ for sh in res:
 print(res1)
 
 # MANY DATA WHERE THE THERE IS NO DATA IN THE AGE FIELD
-# [<1 year        4
-# ,1-3 years,     6
-# 4-11,           15
-# 12-18,          80
-# 19-30,          200
-# 31-40,          323
-# 41-50,          653
-# 51-60,          1539
-# 61-70,          3355
-# 71-80,          4709
-# > 80),          5349
-# [4, 6, 15, 80, 208, 323, 653, 1539, 3355, 4709, 5349]
-# 16241
+# NO AGE GROUP    12267
+# <1 year         7
+# 1-3 years,      7
+# 4-11,           46
+# 12-18,          188
+# 19-30,          480
+# 31-40,          660
+# 41-50,          1157
+# 51-60,          2358
+# 61-70,          4734
+# 71-80,          6437
+# > 80),          7739
+# [12267, 7, 7, 46, 188, 480, 660, 1157, 2358, 4734, 6437, 7739]
+# 36080
