@@ -1,0 +1,13 @@
+Consider the dataset VAERS_COVID_DataAugust2023.csv you created in Task 1 in Project 1.
+
+
+Task 1 (10 points).
+Implement a B+ tree dynamic index structure (based on VAERSID as your index), where the actual data is located at the leaf nodes. The user should have a choice to input the maximum degree of a node. Create the B+ tree that stores the VAERS_COVID_DataAugust2023.csv data set. 
+
+
+Task 2 (5 points).
+The VAERS database added new data in September. The new updated files for 2023 are given below. Insert the new COVID19 adverse events reports that are not already available in the B+ tree created on task 1.
+
+
+Task 3 Extra credit (5 points).
+Implement a simple (text-based) B+ tree visualization  and save it into a txt file.
