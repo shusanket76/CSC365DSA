@@ -1,8 +1,9 @@
-from collections import defaultdict
+f = open("demofile2.txt", "a")
+f.write("  2                         Now the file has more content!")
+f.write("\n")
+f.write("3kdskc")
+f.close()
 
-
-hasmap = defaultdict(list)
-a = [1,2,3,4,1,2,3,4,12,3,5]
-for x in a:
-    hasmap[a].append("Hello")
-print(len(hasmap))
+#open and read the file after the appending:
+f = open("demofile2.txt", "r")
+print(f.read())

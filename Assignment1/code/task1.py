@@ -27,16 +27,16 @@ def vaersIDHashmapCovid(filepath):
             vaersHashmap[int(singlelinearray[0])].append(singlelinearray[1:])
     # returnning [hasmap and heading list]
     return [vaersHashmap, headinglist]
-
-#
-vaersVaxCOVIDID2020Both =vaersIDHashmapCovid("../dataset/2020Vaers/2020VAERSVAX.csv")
+# UP TO HERE AND 2 MORE
+# #
+vaersVaxCOVIDID2020Both =vaersIDHashmapCovid("../dataset/2020VAERSVAX.csv")
 vaersVaxCOVIDID2020 = vaersVaxCOVIDID2020Both[0]
 vaersVaxHeading = vaersVaxCOVIDID2020Both[1]
-vaersVaxCOVIDID2021 =vaersIDHashmapCovid("../dataset/2021Vaers/2021VAERSVAX.csv")[0]
-vaersVaxCOVIDID2022 =vaersIDHashmapCovid("../dataset/2022Vaers/2022VAERSVAX.csv")[0]
-vaersVaxCOVIDID2023 =vaersIDHashmapCovid("../dataset/2023Vaers/2023VAERSVAX.csv")[0]
-vaersVaxNonDomestics =vaersIDHashmapCovid("../dataset/NonDomestics/NONDomesticVAERSVAX.csv")[0]
-print(len(vaersVaxCOVIDID2020)+len(vaersVaxCOVIDID2021)+len(vaersVaxCOVIDID2022)+len(vaersVaxCOVIDID2023)+len(vaersVaxNonDomestics))
+# vaersVaxCOVIDID2021 =vaersIDHashmapCovid("../dataset/2021VAERSVAX.csv")[0]
+# vaersVaxCOVIDID2022 =vaersIDHashmapCovid("../dataset/2022VAERSVAX.csv")[0]
+vaersVaxCOVIDID2023 =vaersIDHashmapCovid("../dataset/september/2023VAERSVAX.csv")[0]
+vaersVaxNonDomestics =vaersIDHashmapCovid("../dataset/september/NonDomesticVAERSVAX.csv")[0]
+# print(len(vaersVaxCOVIDID2020)+len(vaersVaxCOVIDID2021)+len(vaersVaxCOVIDID2022)+len(vaersVaxCOVIDID2023)+len(vaersVaxNonDomestics))
 
 
 # ================================================================================================================================
@@ -61,14 +61,14 @@ def vaersSymptomsHashmapCovid(hasmap, filepath):
     return [vaersSymptomsHasmap, headinglist]
 
 
-vaersSymptomCovid2020Both =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2020,"../dataset/2020Vaers/2020VAERSSYMPTOMS.csv")
+vaersSymptomCovid2020Both =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2020,"../dataset/2020VAERSSYMPTOMS.csv")
 vaersSymptomCovid2020 = vaersSymptomCovid2020Both[0]
 vaersSymptomHeading = vaersSymptomCovid2020Both[1]
-vaersSymptomCovid2021 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2021,"../dataset/2021Vaers/2021VAERSSYMPTOMS.csv")[0]
-vaersSymptomCovid2022 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2022,"../dataset/2022Vaers/2022VAERSSYMPTOMS.csv")[0]
-vaersSymptomCovid2023 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2023,"../dataset/2023Vaers/2023VAERSSYMPTOMS.csv")[0]
-vaersNonDomesticsSymptoms =vaersSymptomsHashmapCovid(vaersVaxNonDomestics,"../dataset/NonDomestics/NonDomesticVAERSSYMPTOMS.csv")[0]
+# vaersSymptomCovid2021 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2021,"../dataset/2021VAERSSYMPTOMS.csv")[0]
+# vaersSymptomCovid2022 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2022,"../dataset/2022VAERSSYMPTOMS.csv")[0]
+vaersSymptomCovid2023 =vaersSymptomsHashmapCovid(vaersVaxCOVIDID2023,"../dataset/september/2023VAERSSYMPTOMS.csv")[0]
 
+vaersNonDomesticsSymptoms =vaersSymptomsHashmapCovid(vaersVaxNonDomestics,"../dataset/september/NonDomesticVAERSSYMPTOMS.csv")[0]
 
 # # Assignment1/dataset/NonDomestics/NonDomesticVAERSSYMPTOMS.csv
 # print(len(vaersSymptomCovid2020)+len(vaersSymptomCovid2021)+len(vaersSymptomCovid2022)+len(vaersSymptomCovid2023)+len(vaersNonDomesticsSymptoms))
@@ -92,13 +92,14 @@ def vaersDataHashmapCovid(hasmap, filepath):
     return [vaersDataHasmap, headinglist]
 
 
-vaersDataCovid2020Both =vaersDataHashmapCovid(vaersVaxCOVIDID2020,"../dataset/2020Vaers/2020VAERSDATA.csv")
+vaersDataCovid2020Both =vaersDataHashmapCovid(vaersVaxCOVIDID2020,"../dataset/2020VAERSDATA.csv")
 vaersDataCovid2020 = vaersDataCovid2020Both[0]
 vaersDataHeading = vaersDataCovid2020Both[1]
-vaersDataCovid2021 =vaersDataHashmapCovid(vaersVaxCOVIDID2021,"../dataset/2021Vaers/2021VAERSDATA.csv")[0]
-vaersDataCovid2022 =vaersDataHashmapCovid(vaersVaxCOVIDID2022,"../dataset/2022Vaers/2022VAERSDATA.csv")[0]
-vaersDataCovid2023 =vaersDataHashmapCovid(vaersVaxCOVIDID2023,"../dataset/2023Vaers/2023VAERSDATA.csv")[0]
-vaersNonDomesticsDataCovid =vaersDataHashmapCovid(vaersVaxNonDomestics,"../dataset/NonDomestics/NonDomesticVAERSDATA.csv")[0]
+# vaersDataCovid2021 =vaersDataHashmapCovid(vaersVaxCOVIDID2021,"../dataset/2021VAERSDATA.csv")[0]
+# vaersDataCovid2022 =vaersDataHashmapCovid(vaersVaxCOVIDID2022,"../dataset/2022VAERSDATA.csv")[0]
+vaersDataCovid2023 =vaersDataHashmapCovid(vaersVaxCOVIDID2023,"../dataset/september/2023VAERSDATA.csv")[0]
+vaersNonDomesticsDataCovid =vaersDataHashmapCovid(vaersVaxNonDomestics,"../dataset/september/NonDomesticVAERSDATA.csv")[0]
+
 
 # # # # ===========================================================================================================================================================================
 # # # merging 3 different hasmap into single hasmap
@@ -109,27 +110,27 @@ def singleYearCovidData(hasmapVaersData, hasmapVaersSymptoms, hasmapVaersCovid):
     return vaerSingleYearcovid
 
 
-covidAllthree2020 = singleYearCovidData(vaersDataCovid2020,vaersSymptomCovid2020,vaersVaxCOVIDID2020 ) 
-covidAllthree2021 = singleYearCovidData(vaersDataCovid2021,vaersSymptomCovid2021,vaersVaxCOVIDID2021 ) 
-covidAllthree2022 = singleYearCovidData(vaersDataCovid2022,vaersSymptomCovid2022,vaersVaxCOVIDID2022 ) 
+# covidAllthree2020 = singleYearCovidData(vaersDataCovid2020,vaersSymptomCovid2020,vaersVaxCOVIDID2020 ) 
+# covidAllthree2021 = singleYearCovidData(vaersDataCovid2021,vaersSymptomCovid2021,vaersVaxCOVIDID2021 ) 
+# covidAllthree2022 = singleYearCovidData(vaersDataCovid2022,vaersSymptomCovid2022,vaersVaxCOVIDID2022 ) 
 covidAllthree2023 = singleYearCovidData(vaersDataCovid2023,vaersSymptomCovid2023,vaersVaxCOVIDID2023 ) 
 covidAllthreeNonDomestics = singleYearCovidData(vaersNonDomesticsDataCovid,vaersNonDomesticsSymptoms,vaersVaxNonDomestics)
 
 
 # # # merging 4 hasmap into single hasmap
-covidAllthree2020.update(covidAllthree2021)
-covidAllthree2020.update(covidAllthree2022)
-covidAllthree2020.update(covidAllthree2023)
-covidAllthree2020.update(covidAllthreeNonDomestics)
-allFileCovid = covidAllthree2020
-
+# covidAllthree2020.update(covidAllthree2021)
+# covidAllthree2020.update(covidAllthree2022)
+# covidAllthree2020.update(covidAllthree2023)
+# covidAllthree2020.update(covidAllthreeNonDomestics)
+covidAllthree2023.update(covidAllthreeNonDomestics)
+allFileCovid = covidAllthree2023
 
 # # # # =============================================================================================================================
 # # # # vaersID 1106890 = does not have any symptoms
 
 # # # # using allthreeYearsCovid to create a new csv file
 
-outputfilename = "VAERS_COVID_DataAugust2023.csv"
+outputfilename = "VAERS_COVID_SEPTEMBER2023.csv"
 r = open(outputfilename,"w")
 writer = csv.writer(r)
 heading = vaersDataHeading+vaersVaxHeading+vaersSymptomHeading
@@ -183,7 +184,7 @@ headinglist2  = ["VAERS_ID","AGE_YRS","SEX","VAX_NAME","RPT_Date","SYMPTOM","DIE
 # # # # datedied= [10]
 # # # # symptomtext = [8]
 
-outputfilename2 = "SYMPTOMDATA.csv"
+outputfilename2 = "SYMPTOMDATASEPTEMBER.csv"
 r2 = open(outputfilename2,"w")
 writer = csv.writer(r2)
 writer.writerow(headinglist2)
@@ -214,9 +215,9 @@ def task2datasetYearly(vaersData, vaersSymptoms, vaersVax):
                 i+=2
 
       
-a = task2datasetYearly(vaersDataCovid2020, vaersSymptomCovid2020, vaersVaxCOVIDID2020)
-b = task2datasetYearly(vaersDataCovid2021, vaersSymptomCovid2021, vaersVaxCOVIDID2021)
-c = task2datasetYearly(vaersDataCovid2022, vaersSymptomCovid2022, vaersVaxCOVIDID2022)
+# a = task2datasetYearly(vaersDataCovid2020, vaersSymptomCovid2020, vaersVaxCOVIDID2020)
+# b = task2datasetYearly(vaersDataCovid2021, vaersSymptomCovid2021, vaersVaxCOVIDID2021)
+# c = task2datasetYearly(vaersDataCovid2022, vaersSymptomCovid2022, vaersVaxCOVIDID2022)
 d = task2datasetYearly(vaersDataCovid2023, vaersSymptomCovid2023, vaersVaxCOVIDID2023)
 e = task2datasetYearly(vaersNonDomesticsDataCovid,vaersNonDomesticsSymptoms,vaersVaxNonDomestics)
 
