@@ -67,6 +67,7 @@ class LeafNode(InternalNode):
         return self.children[self.keys.index(item)]
 
     def __setitem__(self, key, value):
+
         i = self.find_index(key)
         if key not in self.keys:
             self.keys[i:i] = [key]
@@ -133,7 +134,7 @@ class BPlusTree(object):
   
        
     def show(self, node=None, _prefix="", _last=True):
-        f = open("B+TREE_FOR_AUGUST", "a")
+        f = open("B+TREE_FOR_AUGUST_AND_SEPTEMBER", "a")
         
         
         if node is None:
@@ -167,16 +168,16 @@ def read_csv(filename):
     print(len(data))
 
     return data
-a = read_csv("../../Assignment1/code/VAERS_COVID_DataAugust2023.csv")[0:50]
+a = read_csv("../../Assignment1/code/VAERS_COVID_DataAugust2023.csv")
 
-
-
-bplustree = BPlusTree(5)
+userorder = 5
+bplustree = BPlusTree(userorder)
 
 for i in a:
         bplustree[int(i["VAERS_ID"])] = str(i)
+      
     
-bplustree.show()
+# bplustree.show() 
 
 
 
@@ -185,16 +186,19 @@ bplustree.show()
 
 
 # FOR SEPTEMBER
-# b = read_csv("../../Assignment1/code/VAERS_COVID_SEPTEMBER2023.csv")
-# for j in b:
-#         bplustree[int(j["VAERS_ID"])] = str(j)
-# bplustree.show()
+b = read_csv("../../Assignment1/code/VAERS_COVID_SEPTEMBER2023.csv")
+for j in b:
+        bplustree[int(j["VAERS_ID"])] = str(j)
+bplustree.show()
 
 
 
-# node = bplustree.findLeafNode(902446)
+# FINDING A VALUE VIA KEY
+# node = bplustree.findLeafNode(902490)
 # print(node.children)
 
+
+# FACTS:
 # UPTO AUGUST
 # 1589965
 # ONE MILLION FIVE HUNDRED EIGHTY NINE THOUSAND NINE HUNDRED AND SIXTY FIVE

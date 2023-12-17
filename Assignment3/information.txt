@@ -1,0 +1,23 @@
+The goal of this project is to applying association rule mining on the VAERS dataset. 
+Consider the updated datasets attached and utilize your function you created in Task 1 in Project 1 to 
+generate the complete dataset VAERSDataNov_23.csv with COVID 19 vaccine adverse effects as of November, 2023. 
+
+Task 1:
+Covert the VAERSDataNov_23.csv dataset into a transaction dataset , VAERSData_ML where each row contains the 
+following information: VAERS_ID,VAX_MANU, RECVDATE, AGE_YRS, SEX, DIED, DATEDIED,VAX_DATE,  no_of_symptoms(k), 
+symptom_1, symptom_2, ..., symptom_k
+
+Task 2: Association Rule Mining 
+Design and implement an algorithm to discover “association rules” on the VAERSData_ML dataset. You may try out 
+different algorithms. Visualize the result you found. Report any interesting association rules discovered in the 
+experiments and explain why they are interesting.
+https://www-users.cs.umn.edu/~kumar001/dmbook/ch5_association_analysis.pdf
+
+Task 3: Project report
+Your project report should contain the following:
+Theoretical Discussion: Limited to two pages discussing about data preprocessing steps, the motivation for 
+selecting a particular method, and how the parameters are chosen.
+Results: Include results of your experimentations.
+Discussion and error analysis: Try to interpret the results of your model. Discuss intuitions or hypothesis that 
+can be obtained by visual inspections of the resulting association rules. Mention about assumptions if any, discuss
+ issues that might have affected the model’s performance.

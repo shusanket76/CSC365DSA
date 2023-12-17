@@ -10,7 +10,7 @@ def read_csv(filename):
     
     for x in reader:
         data.append(x)
-    print(len(data))
+
     return data
 a = read_csv("./SYMPTOMDATA.csv")
 # ========================================================================================================================
